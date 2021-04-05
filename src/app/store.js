@@ -1,8 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit';
-import counterReducer from '../features/counter/counterSlice';
+import { devToolsEnhancer } from 'redux-devtools-extension';
+
+import mapReducer from '../reducers/MapReducer';
 
 export default configureStore({
   reducer: {
-    counter: counterReducer,
+    mapReducer,
   },
-});
+}, devToolsEnhancer);
